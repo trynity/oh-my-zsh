@@ -10,6 +10,9 @@ path=(/usr/local/share/npm/bin $path)
 # Add Homebrew python executables to PATH
 path=(/usr/local/share/python $path)
 
+# XQuartz
+path=(/opt/X11/bin $path)
+
 # TexLive
 (($+commands[texdist])) && path+=$(texdist --current --expand)/bin/universal-darwin
 
