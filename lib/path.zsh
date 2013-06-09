@@ -21,3 +21,6 @@ path=(${HOME}/.jenv/bin $path)
 
 # Local bin directory
 path=(${HOME}/.bin $path)
+
+# ccache for Homebrew
+path=($(brew --prefix)/Library/LinkedKegs/ccache/libexec $path)
