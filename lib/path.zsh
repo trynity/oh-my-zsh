@@ -23,6 +23,4 @@ path=(${HOME}/.jenv/bin $path)
 path=(${HOME}/.bin $path)
 
 # ccache for Homebrew
-if (which brew); then
-	path=($(brew --prefix)/Library/LinkedKegs/ccache/libexec $path)
-fi
+[[ -e /usr/local/bin/brew ]] && path=($(brew --prefix)/Library/LinkedKegs/ccache/libexec $path)
