@@ -1,10 +1,11 @@
 # Setup hub function for git, if it is available; http://github.com/defunkt/hub
 if [ "$commands[(I)hub]" ] && [ "$commands[(I)ruby]" ]; then
     # Autoload _git completion functions
-    if declare -f _git > /dev/null; then
-      _git
-    fi
-    
+    # This is broken. FIXME
+    #if declare -f _git > /dev/null; then
+    #  _git
+    #fi
+
     if declare -f _git_commands > /dev/null; then
         _hub_commands=(
             'alias:show shell instructions for wrapping git'
