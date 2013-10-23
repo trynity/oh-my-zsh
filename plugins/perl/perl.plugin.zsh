@@ -56,7 +56,8 @@ prep() { # [pattern] [filename unless STDOUT]
 }
 
 # say - append a newline to 'print'
-say() {
-    print "$1\n"
-}
+# This really screws with MacOSX
+# say() {
+#     print "$1\n"
+# }
 
