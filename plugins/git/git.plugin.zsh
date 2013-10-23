@@ -146,6 +146,8 @@ compdef ggpush=git
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
 compdef ggpnp=git
 
+alias -s git='git clone' # Clone URLs by just pasting them
+
 # Pretty log messages
 function _git_log_prettily(){
   if ! [ -z $1 ]; then
