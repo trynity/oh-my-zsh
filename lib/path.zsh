@@ -22,7 +22,10 @@ path=(${HOME}/.bin $path)
 path=(${HOME}/.local/bin $path)
 
 # ccache for Homebrew
-[[ -e /usr/local/bin/brew ]] && path=($(brew --prefix)/Library/LinkedKegs/ccache/libexec $path)
+if [[ -e /usr/local/bin/brew ]]; then
+	path+=("$(brew --prefix)/opt/ccache/libexec")
+	export CCACHE_DIR="/Library/Caches/ccache"
+fi
 
 # nvm/rvm/perlbrew path reodering
 nvm_paths=()
