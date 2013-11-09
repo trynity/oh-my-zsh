@@ -38,7 +38,7 @@ for i in $path; do
 		nvm_paths+=$i
 	elif [[ $i =~ ".rvm" ]]; then
 		rvm_paths+=$i
-	elif [[ $i =~ $PERLBREW_ROOT ]]; then
+	elif [[ -n $PERLBREW_ROOT && $i =~ $PERLBREW_ROOT ]]; then
 		perlbrew_paths+=$i
 	elif [[ $i =~ ".phpbrew" ]]; then
 		phpbrew_paths+=$i
