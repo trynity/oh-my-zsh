@@ -22,4 +22,3 @@ function npm() {
 		command npm $*[1,-1];
 	fi;
 }
->>>>>>> Add "npm exec" a la "bundle exec" for node projects
